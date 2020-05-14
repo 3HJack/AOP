@@ -1,2 +1,3 @@
 rootProject.name='AOP'
 include ':app'
+include ':annotation'

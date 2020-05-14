@@ -1,0 +1,19 @@
+apply plugin: 'java-library'
+apply plugin: 'com.novoda.bintray-release'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+}
+
+sourceCompatibility = "8"
+targetCompatibility = "8"
+
+publish {
+    userOrg = 'onepiece'
+    groupId = 'com.hhh.onepiece'
+    artifactId = 'annotation'
+    publishVersion = '1.0.0'
+    desc = 'onepiece annotation'
+    website = 'https://github.com/3HJack/AOP.git'
+}
