@@ -37,6 +37,13 @@ buildscript {
 ```groovy
 apply plugin: 'ASMPlugin'
 //apply plugin: 'JavassistPlugin'
+
+
+dependencies {
+    // 需要依赖这个注解库
+    implementation 'com.hhh.onepiece:annotation:1.0.0'
+}
+
 ```
 
 具体用法
