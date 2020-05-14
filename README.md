@@ -20,15 +20,25 @@ AOP
 ```groovy
 buildscript {
 
-  repositories {
+    repositories {
         google()
         jcenter()
         maven { url "https://dl.bintray.com/onepiece/maven" }
-  }
+    }
     
-  dependencies {
-    classpath 'com.hhh.onepiece:plugin:1.0.0'
-  }
+    dependencies {
+        classpath 'com.hhh.onepiece:plugin:1.0.0'
+    }
+  
+  
+    allprojects {
+        def rootRepositories = rootProject.buildscript.repositories
+        rootRepositories.each { repo ->
+            repositories.add(repo)
+            buildscript.repositories.add(repo)
+        }
+    }
+
 }
 ```
 
