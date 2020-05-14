@@ -13,7 +13,7 @@ dependencies {
     implementation 'com.android.tools.build:gradle:3.6.3'
     implementation 'org.javassist:javassist:3.27.0-GA'
     implementation 'org.ow2.asm:asm:8.0.1'
-    api 'com.hhh.onepiece:annotation:1.0.0'
+    implementation 'com.hhh.onepiece:annotation:1.0.0'
 }
 
 sourceCompatibility = "8"
