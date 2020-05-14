@@ -1,0 +1,29 @@
+apply plugin: 'java-library'
+apply plugin: 'groovy'
+apply plugin: 'com.novoda.bintray-release'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    //gradle sdk
+    implementation gradleApi()
+    //groovy sdk
+    implementation localGroovy()
+
+    implementation 'com.android.tools.build:gradle:3.6.3'
+    implementation 'org.javassist:javassist:3.27.0-GA'
+    implementation 'org.ow2.asm:asm:8.0.1'
+    api 'com.hhh.onepiece:annotation:1.0.0'
+}
+
+sourceCompatibility = "8"
+targetCompatibility = "8"
+
+publish {
+    userOrg = 'onepiece'
+    groupId = 'com.hhh.onepiece'
+    artifactId = 'plugin'
+    publishVersion = '1.0.0'
+    desc = 'onepiece plugin'
+    website = 'https://github.com/3HJack/AOP.git'
+}
